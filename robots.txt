@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dthapaml.github.io/sudbury-workforce/sitemap.xml
+Sitemap: https://sudburyworkforce.github.io/sudburyworkforce/sitemap.xml
