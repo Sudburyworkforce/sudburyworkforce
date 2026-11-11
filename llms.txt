@@ -1,6 +1,6 @@
 # Sudbury Workforce
 
-> Snow removal, house and apartment cleaning, lawn care, moving help, handyman services and general labour for homes and businesses across Greater Sudbury, Ontario.
+> Snow removal, house, office, window and construction cleaning, junk removal, moving, lawn care, handyman jobs and general labour in Greater Sudbury, ON.
 
 - Call, text or WhatsApp: 705-562-9047
 - Email: sudburyworkforce@gmail.com
@@ -9,9 +9,11 @@
 ## Services
 
 - [Snow Removal](https://sudburyworkforce.github.io/sudburyworkforce/snow-removal-sudbury/): Driveway plowing, walkway shovelling and salting.
-- [House & Apartment Cleaning](https://sudburyworkforce.github.io/sudburyworkforce/house-cleaning-sudbury/): House, apartment and move-out cleaning.
+- [House & Office Cleaning](https://sudburyworkforce.github.io/sudburyworkforce/house-cleaning-sudbury/): House, apartment, move-out and office cleaning.
+- [Window Cleaning](https://sudburyworkforce.github.io/sudburyworkforce/window-cleaning-sudbury/): Inside and outside, with screens, tracks and sills.
 - [Lawn Care](https://sudburyworkforce.github.io/sudburyworkforce/lawn-care-sudbury/): Mowing, trimming and yard cleanups.
-- [Moving Help](https://sudburyworkforce.github.io/sudburyworkforce/moving-help-sudbury/): Moving help, heavy lifting and deliveries.
+- [Movers & Moving Help](https://sudburyworkforce.github.io/sudburyworkforce/moving-help-sudbury/): Full local moves with our truck, plus loading help.
+- [Junk Removal](https://sudburyworkforce.github.io/sudburyworkforce/junk-removal-sudbury/): Furniture, appliances, yard waste and cleanouts hauled away.
 - [Handyman](https://sudburyworkforce.github.io/sudburyworkforce/handyman-sudbury/): Assembly, mounting and small repairs.
 - [General Labour](https://sudburyworkforce.github.io/sudburyworkforce/general-labour-sudbury/): Extra hands for sites and big projects.
 - [Construction Cleaning](https://sudburyworkforce.github.io/sudburyworkforce/construction-cleaning-sudbury/): Post-renovation and new-build cleanup.

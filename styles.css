@@ -452,6 +452,10 @@ a { color: inherit; }
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+@media (min-width: 1000px) {
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 .service-card {
   background: var(--gray-light);
   border-radius: var(--radius);
@@ -1146,7 +1150,7 @@ picture { display: block; }
 .info-card a,
 .steps a,
 .area-note a,
-.cta-band .section-sub a { color: var(--navy); font-weight: 700; }
+.section-sub a { color: var(--navy); font-weight: 700; }
 
 .steps {
   list-style: none;
