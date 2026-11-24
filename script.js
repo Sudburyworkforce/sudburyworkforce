@@ -97,9 +97,21 @@
     var address = form.address.value.trim();
     var message = form.message.value.trim();
 
+    // Mark each empty required field and move focus to the first, which also scrolls to it.
+    var required = [form.name, form.phone, form.service, form.message];
+    var missing = required.filter(function (field) { return !field.value.trim(); });
+    required.forEach(function (field) {
+      if (missing.indexOf(field) >= 0) {
+        field.setAttribute('aria-invalid', 'true');
+        field.setAttribute('aria-describedby', 'form-error');
+      } else {
+        field.removeAttribute('aria-invalid');
+        field.removeAttribute('aria-describedby');
+      }
+    });
     if (!name || !phone || !service || !message) {
       errorEl.hidden = false;
-      errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      missing[0].focus();
       return;
     }
     errorEl.hidden = true;
