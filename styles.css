@@ -1,10 +1,11 @@
 /* Hallmark · shape: Feature Stack (draw c4df89) · genre: editorial · theme: Sport (deal 3/3, seed local-crew-greater-sudbury-c60a·f6886a12·2026-11-24·r0) · brand: the logo and its navy kept · redesign: full · copy: verbatim · job: hire
- * hero: Ledge (/), Stage (service pages with a photo), Banner (pages without one) · nav: floating bar · footer: colophon block · imagery: photographs, the owner's own job photos (duotone ink and paper) · signature: one real Sudbury driveway, before and after, as the hero's field
- * axes: light/display-condensed/chromatic-blue · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+ * hero: Ledge (/), Stage (service pages with a photo), Banner (pages without one) · nav: floating bar · footer: colophon block · imagery: photographs, the owner's own job photos in natural colour · signature: one real Sudbury driveway, before and after, as the hero's field
+ * axes: light/display-condensed/chromatic-blue · posture: committed (the logo navy as the field: heads, bands, footer) · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, a trades template could fit any town; led with the owner's own driveway photos and kept every Sudbury place name in the copy */
 /* Hallmark · waive 49b · links inside running sentences and the two-column job captions on phones · each is a Sudbury service name or a phrase inside a sentence, so it wraps with its text and cannot shorten */
 /* Hallmark · waive 71 · the h3 under each job photo is that photo's figcaption · a caption belongs to the picture above it, so it sits nearer the photo than the next card */
 /* Hallmark · answered F3 · text-wrap: balance sits on h1, h2 and h3 in base.css, which loads before this file */
+/* Hallmark · answered F4 · the navy WhatsApp band flips the primary to a paper fill with navy type; it is the same control on its own surface */
 /* Hallmark · answered F20 · thirteen snow-page places and the owner's real lists cannot divide evenly; the count is the true service area */
 /* Hallmark · answered F26 · House, Apartment & Office Cleaning is the service's own name and balances to two lines at 375 */
 /* Hallmark · dismissed 77 · the 404 page is a way back to the services; its four sections are the page's own */
@@ -23,7 +24,7 @@
 html { scroll-padding-top: calc(var(--header-h) + var(--space-xl)); }
 ::selection { background: var(--color-accent); color: var(--color-accent-ink); }
 strong, b { font-weight: 500; }
-h1, h2, h3 { text-transform: uppercase; line-height: 1.02; }
+h1, h2, h3 { text-transform: uppercase; line-height: 1.02; color: var(--color-field); }
 h3 { line-height: 1.05; }
 a { text-decoration-color: color-mix(in oklab, currentColor 40%, transparent); }
 a:hover { text-decoration-color: var(--color-accent-deep); }
@@ -130,12 +131,11 @@ ul, ol { margin: 0; }
   .btn-header { display: inline-flex; }
 }
 
-/* ---------------------------------------------------------------- the photographs: duotone, ink on paper */
+/* ---------------------------------------------------------------- the photographs, in their own colours (the owner asked for colour over the theme's duotone) */
 
 .photo { position: relative; isolation: isolate; overflow: hidden; margin: 0; border-radius: var(--radius-card); background: var(--color-paper); outline: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 8%, transparent); outline-offset: -1px; }
 .photo > picture { display: block; height: 100%; }
-.photo img, .photo video { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.2); mix-blend-mode: multiply; }
-.photo::before { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--color-ink); mix-blend-mode: lighten; pointer-events: none; }
+.photo img, .photo video { width: 100%; height: 100%; object-fit: cover; }
 
 /* ---------------------------------------------------------------- hero: the home Ledge */
 
@@ -145,7 +145,7 @@ ul, ol { margin: 0; }
 .hero-field figcaption {
   position: absolute; left: var(--space-sm); bottom: var(--space-sm); z-index: 2;
   padding: var(--space-2xs) var(--space-xs); border-radius: 2px;
-  background: var(--color-ink); color: var(--color-paper); font: 500 var(--text-sm)/1.3 var(--font-body);
+  background: var(--color-field); color: var(--color-on-field); font: 500 var(--text-sm)/1.3 var(--font-body);
 }
 .hero-base { display: grid; gap: var(--space-lg); margin-top: var(--space-xl); }
 .hero-lede { margin-top: var(--space-md); color: var(--color-ink-2); }
@@ -223,11 +223,11 @@ ul, ol { margin: 0; }
 
 /* we've got you covered: the one ink band */
 
-.covered { padding-block: var(--section-gap-s); background: var(--color-ink); color: var(--color-paper); }
-.covered h2 { color: var(--color-paper); }
+.covered { padding-block: var(--section-gap-s); background: var(--color-field); color: var(--color-on-field); }
+.covered h2 { color: var(--color-on-field); }
 .covered .feature-list { margin-top: var(--space-2xl); border-top-color: color-mix(in oklab, var(--color-paper) 40%, transparent); }
 .covered .feature-list li { border-color: color-mix(in oklab, var(--color-paper) 25%, transparent); }
-.covered .feature-list p { color: var(--color-paper); }
+.covered .feature-list p { color: var(--color-on-field); }
 
 .feature-list { display: grid; list-style: none; padding: 0; border-top: var(--rule-bar) solid var(--color-rule-2); }
 .feature-list li { padding-block: var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-rule); }
@@ -353,9 +353,13 @@ ul, ol { margin: 0; }
 
 /* the snow page's photo band and closing band */
 
-.quote-band { padding-block: var(--space-3xl); background: var(--color-paper-2); border-top: var(--rule-bar) solid var(--color-rule-2); }
+.quote-band { padding-block: var(--space-3xl); background: var(--color-field); color: var(--color-on-field); }
 .quote-band-title { max-width: 24ch; font: var(--display-weight) var(--text-display-s)/1.02 var(--font-display); text-transform: uppercase; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
-.quote-band-text { max-width: 60ch; margin-top: var(--space-lg); font-size: var(--text-lead); color: var(--color-ink-2); }
+.quote-band-text { max-width: 60ch; margin-top: var(--space-lg); font-size: var(--text-lead); }
+.quote-band .btn-whatsapp { background: var(--color-on-field); color: var(--color-field); }
+.quote-band .btn-whatsapp:hover { background: var(--color-paper-3); }
+.quote-band .btn-outline-light { border-color: var(--color-on-field); color: var(--color-on-field); }
+.quote-band .btn-outline-light:hover { background: color-mix(in oklab, var(--color-on-field) 14%, transparent); }
 .quote-band .hero-actions, .cta-band .hero-actions { margin-top: var(--space-xl); }
 
 /* ---------------------------------------------------------------- the quote form */
@@ -396,17 +400,22 @@ ul, ol { margin: 0; }
 
 /* ---------------------------------------------------------------- footer: a colophon */
 
-.site-footer { padding-top: var(--space-3xl); border-top: var(--rule-bar) solid var(--color-rule-2); }
+.site-footer { padding-top: var(--space-3xl); background: var(--color-field); color: var(--color-on-field); }
+.site-footer a { color: var(--color-on-field); }
 .footer-inner { display: grid; gap: var(--space-2xl); }
 .footer-colophon { max-width: 52ch; font-size: var(--text-lead); line-height: 1.5; }
 .footer-colophon strong { font-family: var(--font-display); font-weight: var(--display-weight); text-transform: uppercase; }
 .footer-nav { display: grid; gap: var(--space-xl); }
-.footer-heading { max-width: none; margin-bottom: var(--space-sm); font: 500 var(--text-sm)/1.3 var(--font-body); text-transform: none; letter-spacing: normal; color: var(--color-muted); }
+.footer-heading { max-width: none; margin-bottom: var(--space-sm); font: 500 var(--text-sm)/1.3 var(--font-body); text-transform: none; letter-spacing: normal; color: var(--color-on-field); }
 .footer-list { display: grid; gap: var(--space-xs); list-style: none; padding: 0; }
 .footer-list a { text-decoration: none; }
-.footer-list a:hover { text-decoration: underline; text-decoration-color: var(--color-accent-deep); }
+.footer-list a:hover { text-decoration: underline; text-decoration-color: var(--color-on-field); }
 .footer-list-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-lg); }
-.footer-bottom { margin-top: var(--space-3xl); padding-block: var(--space-lg); border-top: var(--rule-hair) solid var(--color-rule); font-size: var(--text-sm); color: var(--color-muted); }
+.footer-bottom { margin-top: var(--space-3xl); padding-block: var(--space-lg); border-top: var(--rule-hair) solid color-mix(in oklab, var(--color-on-field) 30%, transparent); font-size: var(--text-sm); }
+
+/* on the navy field: paper links and a paper focus ring */
+:is(.covered, .quote-band, .site-footer) a:hover { text-decoration-color: var(--color-on-field); }
+:is(.covered, .quote-band, .site-footer) :focus-visible { outline-color: var(--color-on-field); }
 @media (min-width: 40rem) { .footer-nav { grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr); } }
 @media (max-width: 39.98rem) { .footer-list-cols { grid-template-columns: minmax(0, 1fr); } }
 @media (min-width: 90rem) {
