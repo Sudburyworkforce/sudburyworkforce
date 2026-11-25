@@ -1,5 +1,5 @@
 /* Hallmark · shape: Feature Stack (draw c4df89) · genre: editorial · theme: Sport (deal 3/3, seed local-crew-greater-sudbury-c60a·f6886a12·2026-11-24·r0) · brand: the logo and its navy kept · redesign: full · copy: verbatim · job: hire
- * hero: Ledge (/), Stage (service pages with a photo), Banner (pages without one) · nav: floating bar · footer: colophon block · imagery: photographs, the owner's own job photos in natural colour · signature: one real Sudbury driveway, before and after, as the hero's field
+ * hero: Ledge (/), Stage (service pages with a photo), Banner (pages without one) · nav: navy bar, the logo on a paper plate · footer: colophon block · imagery: photographs, the owner's own job photos in natural colour · signature: one real Sudbury driveway, before and after, as the hero's field
  * axes: light/display-condensed/chromatic-blue · posture: committed (the logo navy as the field: heads, bands, footer) · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, a trades template could fit any town; led with the owner's own driveway photos and kept every Sudbury place name in the copy */
 /* Hallmark · waive 49b · links inside running sentences and the two-column job captions on phones · each is a Sudbury service name or a phrase inside a sentence, so it wraps with its text and cannot shorten */
@@ -56,21 +56,20 @@ ul, ol { margin: 0; }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
 
-/* ---------------------------------------------------------------- header: a floating bar */
+/* ---------------------------------------------------------------- header: the navy bar (the owner's pick) */
 
-.site-header { position: sticky; top: 0; z-index: var(--z-sticky-nav); padding-top: var(--space-sm); }
-.header-inner {
-  position: relative; display: flex; align-items: center; gap: var(--space-lg);
-  min-height: var(--header-h); padding: var(--space-xs) var(--space-xs) var(--space-xs) var(--space-md);
-  background: var(--color-paper); border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-card);
-}
-.logo { display: flex; align-items: center; flex-shrink: 0; margin-right: auto; }
+.site-header { position: sticky; top: 0; z-index: var(--z-sticky-nav); background: var(--color-field); color: var(--color-on-field); }
+.header-inner { position: relative; display: flex; align-items: center; gap: var(--space-lg); min-height: var(--header-h); padding-block: var(--space-xs); }
+.site-header :focus-visible { outline-color: var(--color-on-field); }
+
+/* the logo keeps its own colours on a paper plate */
+.logo { display: flex; align-items: center; flex-shrink: 0; margin-right: auto; padding: var(--space-2xs) var(--space-xs); background: var(--color-paper); border-radius: var(--radius-card); }
 .logo-img { width: auto; height: 40px; }
 
 .main-nav { display: none; }
-.main-nav a, .nav-dropdown-toggle { color: var(--color-ink); font: 500 var(--text-md)/1.2 var(--font-body); text-decoration: none; white-space: nowrap; }
-.main-nav a:hover, .nav-dropdown-toggle:hover { color: var(--color-accent-deep); }
-.main-nav a[aria-current="page"] { color: var(--color-accent); text-decoration: underline; text-decoration-thickness: var(--rule-bar); text-underline-offset: 0.4em; }
+.main-nav a, .nav-dropdown-toggle { color: var(--color-on-field); font: 500 var(--text-md)/1.2 var(--font-body); text-decoration: none; white-space: nowrap; }
+.main-nav a:hover, .nav-dropdown-toggle:hover { text-decoration: underline; text-decoration-thickness: var(--rule-hair); text-underline-offset: 0.4em; }
+.main-nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: var(--rule-bar); text-underline-offset: 0.4em; }
 
 .nav-dropdown { position: relative; }
 .nav-dropdown-toggle { display: inline-flex; align-items: center; gap: var(--space-2xs); min-height: 44px; padding: 0; border: 0; background: none; cursor: pointer; }
@@ -79,31 +78,41 @@ ul, ol { margin: 0; }
 .sub-menu { display: none; list-style: none; margin: 0; padding: 0; }
 .nav-dropdown.open .sub-menu { display: block; }
 .main-nav .sub-menu a { display: block; padding: var(--space-xs) 0; }
-.main-nav .sub-menu-all a { color: var(--color-accent); }
+.main-nav .sub-menu-all a { font-weight: 500; text-decoration: underline; text-underline-offset: 0.3em; }
 
 .header-actions { display: flex; align-items: center; gap: var(--space-xs); }
 .btn-call, .btn-header { min-height: 48px; padding: 0 var(--space-md); }
+.site-header .btn-call { border-color: var(--color-on-field); color: var(--color-on-field); }
+.site-header .btn-call:hover { background: color-mix(in oklab, var(--color-on-field) 14%, transparent); }
+.site-header .btn-header { background: var(--color-on-field); color: var(--color-field); }
+.site-header .btn-header:hover { background: var(--color-paper-3); }
 .btn-call-number { display: none; }
 .btn-header { display: none; }
 
 .nav-toggle { position: relative; display: grid; place-content: center; gap: var(--space-2xs); width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; }
-.nav-toggle span { display: block; width: 22px; height: var(--rule-bar); background: var(--color-ink); transition: transform var(--dur-short) var(--ease-out), opacity var(--dur-short) var(--ease-out); }
+.nav-toggle span { display: block; width: 22px; height: var(--rule-bar); background: var(--color-on-field); transition: transform var(--dur-short) var(--ease-out), opacity var(--dur-short) var(--ease-out); }
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
+/* under 1100px the menu opens as a full-screen navy panel below the bar */
 @media (max-width: 1099.98px) {
   .main-nav {
-    position: absolute; top: calc(100% + var(--space-xs)); left: 0; right: 0;
-    flex-direction: column; align-items: stretch; max-height: calc(100dvh - var(--header-h) - var(--space-2xl)); overflow-y: auto;
-    padding: var(--space-xs) var(--space-lg) var(--space-md);
-    background: var(--color-paper); border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-card);
+    position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
+    flex-direction: column; align-items: stretch; overflow-y: auto; overscroll-behavior: contain;
+    padding: var(--space-md) var(--gutter) var(--space-2xl);
+    background: var(--color-field); border-top: var(--rule-hair) solid color-mix(in oklab, var(--color-on-field) 25%, transparent);
   }
   .main-nav.open { display: flex; }
-  .main-nav > a, .nav-dropdown-toggle { display: flex; width: 100%; min-height: 48px; align-items: center; border-bottom: var(--rule-hair) solid var(--color-rule); }
+  .main-nav > a, .nav-dropdown-toggle {
+    display: flex; width: 100%; min-height: 56px; align-items: center;
+    font: 500 var(--text-lg)/1.2 var(--font-body);
+    border-bottom: var(--rule-hair) solid color-mix(in oklab, var(--color-on-field) 25%, transparent);
+  }
   .main-nav > a:last-child { border-bottom: 0; }
   .nav-dropdown { width: 100%; }
-  .sub-menu { padding: var(--space-2xs) 0 var(--space-xs) var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); }
+  .sub-menu { padding: var(--space-xs) 0 var(--space-sm) var(--space-md); border-bottom: var(--rule-hair) solid color-mix(in oklab, var(--color-on-field) 25%, transparent); }
+  .main-nav .sub-menu a { font-size: var(--text-lg); }
 }
 
 @media (min-width: 600px) {
@@ -117,14 +126,18 @@ ul, ol { margin: 0; }
   .nav-toggle { display: none; }
   .nav-dropdown:hover .sub-menu { display: block; }
   .nav-dropdown:hover .icon-chevron { transform: rotate(180deg); }
-  .nav-dropdown::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: var(--space-sm); }
+  .nav-dropdown::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: var(--space-lg); }
+  /* the desktop Services list drops onto paper, under a navy bar rule */
   .sub-menu {
-    position: absolute; top: calc(100% + var(--space-sm)); left: calc(-1 * var(--space-md)); z-index: var(--z-dropdown);
+    position: absolute; top: calc(100% + var(--space-md)); left: calc(-1 * var(--space-md)); z-index: var(--z-dropdown);
     min-width: 17rem; padding: var(--space-xs) var(--space-md);
     background: var(--color-paper); border: var(--rule-hair) solid var(--color-rule); border-top: var(--rule-bar) solid var(--color-rule-2); border-radius: var(--radius-card);
   }
-  .main-nav .sub-menu a { padding: var(--space-xs) 0; border-bottom: var(--rule-hair) solid var(--color-rule); }
+  .main-nav .sub-menu a { padding: var(--space-xs) 0; color: var(--color-ink); border-bottom: var(--rule-hair) solid var(--color-rule); }
+  .main-nav .sub-menu a:hover, .main-nav .sub-menu a[aria-current="page"] { color: var(--color-field); }
   .main-nav .sub-menu li:last-child a { border-bottom: 0; }
+  .main-nav .sub-menu-all a { color: var(--color-field); }
+  .sub-menu :focus-visible { outline-color: var(--color-focus); }
 }
 
 @media (min-width: 1280px) {

@@ -17,7 +17,7 @@
   --color-accent-hover: oklch(29% 0.085 259); --color-focus: oklch(40% 0.180 258); --color-slot: oklch(76% 0.07 258);
   --font-display: "Saira Condensed", "Arial Narrow", sans-serif; --font-body: "Albert Sans", ui-sans-serif, system-ui, sans-serif;
   --radius-card: 4px; --radius-pill: 4px; --radius-input: 4px; --rule-hair: 1px; --rule-bar: 2px;
-  --header-h: 64px;
+  --header-h: 72px;
   /* The brand field: the logo navy carries the bands, the footer and the heads (Committed posture). */
   --color-field: oklch(36.7% 0.109 258); --color-on-field: oklch(98% 0.005 250);
   --shadow-card: none;
